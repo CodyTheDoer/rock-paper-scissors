@@ -32,9 +32,7 @@ function play(playerHand) {
         console.log('You threw ' + playerSelection + '!');
     } else {
         alert('Please enter your move, Rock, Paper, or Scissors')
-        let playerHand = prompt('Pick your destiny');
-        playerHand = normalize(playerHand);
-        play(playerHand);
+        game(playerSelection, computerSelection);
     }
 }
 
@@ -76,5 +74,6 @@ function game(playerSelection, computerSelection) {
     computerSelection = computerPlay(hands)
     console.log(playRound(playerSelection, computerSelection));
 }
+
 
 game(playerSelection, computerSelection);
